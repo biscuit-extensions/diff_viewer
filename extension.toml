@@ -1,7 +1,19 @@
 [extension]
 id = "diff_viewer"
 name = "Diff Viewer"
-version = "0.1.0"
-description = "Diff Viewer extension for Biscuit"
-author = "biscuit-extensions"
+version = "0.2.0"
+description = "Side-by-side visual difference viewer for open editors"
+author = "tomlin7"
 icon = "icon.png"
+
+[dependencies]
+python = []
+tools = []
+
+[contributes]
+commands = [
+    { id = "diff_viewer.compare_files", title = "Diff Viewer: Compare Two Files" },
+    { id = "diff_viewer.compare_with_clipboard", title = "Diff Viewer: Compare with Clipboard" },
+    { id = "diff_viewer.next_diff", title = "Diff Viewer: Jump to Next Diff Hunk" },
+    { id = "diff_viewer.prev_diff", title = "Diff Viewer: Jump to Previous Diff Hunk" }
+]
